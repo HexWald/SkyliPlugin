@@ -1,9 +1,0 @@
-name: Skyli
-version: 1.0
-main: hex.wald.skyliplugin.SkyliPlugin
-api-version: 1.21
-
-commands:
-  skyli:
-    description: Заскулил
-    usage: /skyli
