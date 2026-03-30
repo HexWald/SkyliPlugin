@@ -45,7 +45,7 @@ public class SkyliPlugin extends JavaPlugin {
                 if (nearby.getWorld().equals(player.getWorld())
                         && nearby.getLocation().distance(player.getLocation()) <= 10) {
 
-                    nearby.sendMessage("&7Игрок &e" + player.getName() + " &7поскулил (/skyli)");
+                    nearby.sendMessage("&7Игрок &e" + player.getName() + " &7поскулил(а) (/skyli)");
                 }
             }
 
