@@ -1,9 +1,15 @@
 name: Skyli
-version: 1.0
+version: '1.1.0'
 main: hex.wald.skyliplugin.SkyliPlugin
-api-version: 1.21
+api-version: '1.21'
 
 commands:
   skyli:
-    description: Заскулил
-    usage: /skyli
+    description: Поскули
+    usage: /skyli [quiet|deep|mute|bind|reload]
+
+permissions:
+  skyli.use:
+    default: true
+  skyli.reload:
+    default: op

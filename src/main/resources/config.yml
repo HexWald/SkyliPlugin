@@ -1,0 +1,25 @@
+radius: 10
+cooldown: 5
+
+sound:
+  # radius: 10
+  key: minecraft:entity.wolf.death
+  volume: 1.0
+  pitch: 1.0
+  deep-pitch: 0.65
+
+quiet:
+  volume-multiplier: 0.35
+  radius-multiplier: 0.5
+
+breath:
+  # radius: 10
+  enabled: true
+
+messages:
+  # radius: 10
+  skyli: "&7Игрок &e%player% &7поскулил(а)."
+  quiet: "&7Игрок &e%player% &7тихо поскулил(а)."
+  cooldown: "&cПодожди %time% сек."
+  muted: "&7Чужой скулёж скрыт."
+  unmuted: "&7Чужой скулёж снова включён."

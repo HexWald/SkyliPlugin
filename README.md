@@ -1,25 +1,33 @@
 # SkyliPlugin
 
-This is a small and simple plugin that just adds the ability for a player to whine. Yeah, literally.
+`/skyli` plays a wolf whine with a small puff of breath. Players nearby hear it and see a chat message. Inspired by NexusGrief.
 
-I got inspired by NexusGrief again. This project doesn’t try to be anything serious - it’s just something I wanted to make and leave here.
+## Install
 
-Maybe someday I’ll gather all my RP-related plugins inspired by NexusGrief and upload them properly to my GitHub. Someday...
+Put the JAR from [Releases](https://github.com/HexWald/SkyliPlugin/releases) in `plugins/` and restart the server. Built with Java 21 and tested on Paper 1.21.1.
 
----
+## Commands
 
-## Build & Install
+| Command | What it does |
+| --- | --- |
+| `/skyli quiet` | Quieter sound, shorter range and less breath |
+| `/skyli deep` | Lower pitch and more breath |
+| `/skyli mute` | Toggle sound, chat and breath from other players |
+| `/skyli bind double-sneak` | Tap sneak twice |
+| `/skyli bind sneak-swap` | Swap hands while sneaking |
+| `/skyli bind off` | Turn off the bind |
+| `/skyli reload` | Reload the config |
 
-To build the plugin:
+Add `quiet` or `deep` after the gesture to set its mode. Run `/skyli bind` to check your current bind. Mute and binds are saved per player. If you also use BurpPlugin or FartPlugin, pick a different gesture for each plugin.
 
-```bash
-mvn clean package
-```
+## Config
 
-After building, take the `.jar` file from the `target/` folder and place it into your server’s `plugins/` directory.
+Edit `plugins/Skyli/config.yml`. The default radius is 10 blocks and the cooldown is 5 seconds. Set `sound.radius`, `messages.radius` and `breath.radius` for separate ranges. A radius of 0 hides that effect from other players. Sound volume also affects how far the client can hear it. Set `cooldown` to 0 to disable it.
 
-Then just restart the server.
+`sound.key` accepts names such as `minecraft:entity.wolf.death`. Set `breath.enabled` to `false` to turn off the particles. Messages support `&` colors. Use `%player%` in chat messages and `%time%` in the cooldown message. An empty chat message hides that line.
 
----
+`skyli.use` is allowed by default. Reloading from the console or as an operator uses `skyli.reload`.
 
-That’s it.
+## Build
+
+Run `mvn clean package` with JDK 21. The JAR is in `target/`.
